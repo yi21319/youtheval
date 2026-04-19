@@ -8,6 +8,7 @@
 body {
     font-family: "KaiTi", "STKaiti", "FangSong", serif;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 #studentSystem {
@@ -283,7 +284,8 @@ button.submit-btn:hover {
 .student-body {
     background-color: #f8f5f0;
     color: #333;
-    min-height: 100vh;
+    height: 100vh;
+    overflow-y: auto;
 }
 
 .student-body.dark-theme {
@@ -303,8 +305,7 @@ button.submit-btn:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-/* 左侧导航栏样式 */
-/* 左侧导航栏样式 - 修改：添加固定定位，移除滑动效果 */
+/* ==================== 左侧导航栏样式 ==================== */
 .sidebar {
     width: 240px;
     background-color: #fff;
@@ -316,7 +317,6 @@ button.submit-btn:hover {
     height: 100vh;
 }
 
-/* 可选：美化滚动条 */
 .sidebar::-webkit-scrollbar {
     width: 4px;
 }
@@ -366,7 +366,6 @@ button.submit-btn:hover {
     padding: 20px 0;
 }
 
-/* 修改：移除hover时的滑动效果 */
 .nav-item {
     display: flex;
     align-items: center;
@@ -384,7 +383,6 @@ button.submit-btn:hover {
     color: #aaa;
 }
 
-/* 移除padding-left变化，去掉滑动效果 */
 .nav-item:hover {
     background-color: #f9f5f0;
     color: #b8860b;
@@ -396,7 +394,6 @@ button.submit-btn:hover {
     color: #d4a017;
 }
 
-/* 活跃状态使用圆角背景 */
 .nav-item.active {
     background-color: #f9f5f0;
     color: #b8860b;
@@ -409,7 +406,6 @@ button.submit-btn:hover {
     color: #d4a017;
 }
 
-/* 图标样式 - 固定宽度保证对齐 */
 .nav-item i {
     width: 28px;
     margin-right: 12px;
@@ -417,12 +413,10 @@ button.submit-btn:hover {
     transition: none;
 }
 
-/* 移除hover时图标放大效果 */
 .nav-item:hover i {
     transform: none;
 }
 
-/* 机器人区域 */
 .robot-area {
     padding: 20px;
     text-align: center;
@@ -452,7 +446,6 @@ button.submit-btn:hover {
     margin: 0;
 }
 
-/* 退出按钮 */
 .logout-btn {
     display: flex;
     align-items: center;
@@ -491,7 +484,7 @@ button.submit-btn:hover {
     transform: none;
 }
 
-/* 右侧主内容区样式 */
+/* ==================== 右侧主内容区样式 ==================== */
 .main-content {
     flex: 1;
     background-color: #f8f5f0;
@@ -647,6 +640,7 @@ button.submit-btn:hover {
     display: block;
 }
 
+/* ==================== 卡片样式 ==================== */
 .section {
     background-color: #fff;
     border-radius: 8px;
@@ -715,7 +709,7 @@ button.submit-btn:hover {
     transform: translateY(-2px);
 }
 
-/* 总分细则样式 */
+/* ==================== 总分细则样式 ==================== */
 .score-details {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -842,7 +836,7 @@ button.submit-btn:hover {
     transform: scale(1.1);
 }
 
-/* 图表区域样式 */
+/* ==================== 图表区域样式 ==================== */
 .charts-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -897,7 +891,7 @@ button.submit-btn:hover {
     color: #aaa;
 }
 
-/* 雷达图模拟 */
+/* ==================== 雷达图 ==================== */
 .radar-chart {
     width: 200px;
     height: 200px;
@@ -1031,7 +1025,7 @@ button.submit-btn:hover {
     background-color: rgba(184, 134, 11, 0.3);
 }
 
-/* 折线图模拟 */
+/* ==================== 折线图 ==================== */
 .line-chart {
     height: 200px;
     margin: 20px 0;
@@ -1101,7 +1095,7 @@ button.submit-btn:hover {
     font-weight: bold;
 }
 
-/* 成长建议样式 */
+/* ==================== 成长建议 ==================== */
 .suggestions-list {
     list-style: none;
 }
@@ -1166,7 +1160,7 @@ button.submit-btn:hover {
     border-top: 1px dashed #e0d0b0;
 }
 
-/* 通知页面样式 */
+/* ==================== 通知页面 ==================== */
 .notification-header {
     display: flex;
     justify-content: space-between;
@@ -1270,16 +1264,17 @@ button.submit-btn:hover {
     background-color: #aaa;
 }
 
+/* ==================== 通知详情容器 ==================== */
+#notification-detail-container {
+    margin-top: 20px;
+}
+
 .notification-detail-container {
     padding: 30px;
     background-color: #fff;
     border-radius: 8px;
     margin-top: 20px;
     display: none;
-}
-
-.student-body.dark-theme .notification-detail-container {
-    background-color: #3a3a3a;
 }
 
 .notification-detail-container.active {
@@ -1323,6 +1318,7 @@ button.submit-btn:hover {
     border-top-color: #555;
 }
 
+/* ==================== 返回按钮 ==================== */
 .back-btn {
     background-color: #b8860b;
     color: white;
@@ -1339,7 +1335,7 @@ button.submit-btn:hover {
     transform: translateY(-2px);
 }
 
-/* 评测标准页面样式 */
+/* ==================== 评测标准页面 ==================== */
 .standard-category {
     margin-bottom: 30px;
 }
@@ -1442,7 +1438,21 @@ button.submit-btn:hover {
     min-width: 40px;
 }
 
-/* 综测填报页面样式 */
+/* ==================== 编辑按钮 ==================== */
+.edit-standard-btn {
+    background: #b8860b;
+    color: white;
+    border: none;
+    padding: 4px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-standard-btn:hover {
+    background: #a0522d;
+}
+
+/* ==================== 综测填报页面 ==================== */
 .upload-area {
     text-align: center;
     padding: 40px 20px;
@@ -1549,7 +1559,7 @@ button.submit-btn:hover {
     margin-right: 8px;
 }
 
-/* 模态框样式 */
+/* ==================== 模态框 ==================== */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -1754,7 +1764,7 @@ button.submit-btn:hover {
     background-color: #5a5a5a;
 }
 
-/* 记录列表样式 */
+/* ==================== 记录列表 ==================== */
 .records-container {
     margin-top: 30px;
 }
@@ -1899,7 +1909,7 @@ button.submit-btn:hover {
     color: #e57373;
 }
 
-/* 记录详情样式 */
+/* ==================== 记录详情 ==================== */
 .record-detail-container {
     padding: 30px;
     background-color: #fff;
@@ -1974,24 +1984,19 @@ button.submit-btn:hover {
 }
 
 .proof-preview {
-    max-width: 300px;
+    max-width: 200px;
     margin-top: 10px;
     border: 1px solid #eee;
     border-radius: 4px;
     overflow: hidden;
 }
 
-.student-body.dark-theme .proof-preview {
-    border-color: #555;
-}
-
 .proof-preview img {
     width: 100%;
     height: auto;
-    display: block;
 }
 
-/* 账号管理页面样式 */
+/* ==================== 账号管理 ==================== */
 .account-tabs {
     display: flex;
     border-bottom: 1px solid #eee;
@@ -2197,7 +2202,7 @@ button.submit-btn:hover {
     cursor: not-allowed;
 }
 
-/* 通知提示样式 */
+/* ==================== Toast通知 ==================== */
 .notification-toast {
     position: fixed;
     top: 20px;
@@ -2214,7 +2219,116 @@ button.submit-btn:hover {
     transition: opacity 0.3s, transform 0.3s;
 }
 
-/* 响应式调整 */
+/* ==================== 表格样式 ==================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    border: 1px solid #e0d0b0;
+    padding: 10px;
+    text-align: left;
+}
+
+.student-body.dark-theme table th,
+.student-body.dark-theme table td {
+    border-color: #555;
+}
+
+/* 学期切换样式 */
+.semester-switch {
+    display: flex;
+    align-items: center;
+}
+
+#semesterSelect {
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid #eae2d6;
+    background-color: #fff;
+    color: #555;
+    font-size: 13px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#semesterSelect:hover {
+    border-color: #b8860b;
+}
+
+.student-body.dark-theme #semesterSelect {
+    background-color: #4a4a4a;
+    border-color: #666;
+    color: #e0e0e0;
+}
+
+/* 雷达图容器 */
+.radar-chart {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.radar-svg {
+    display: block;
+    margin: 0 auto;
+}
+
+/* 雷达图数据点悬停效果 */
+#radar-chart circle[fill="#b8860b"] {
+    cursor: pointer;
+    transition: r 0.2s;
+}
+
+#radar-chart circle[fill="#b8860b"]:hover {
+    r: 7;
+    filter: drop-shadow(0 0 4px #b8860b);
+}
+
+/* 折线图容器 */
+.line-chart-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+#trendChart {
+    display: block;
+    margin: 0 auto;
+}
+
+/* ==================== 班委系统主体样式 ==================== */
+#monitorSystem {
+    background-color: #f8f5f0;
+    color: #333;
+    height: 100vh;
+    overflow-y: auto;
+    display: none;
+}
+
+#monitorSystem.dark-theme {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+/* ==================== 管理员系统主体样式 ==================== */
+#adminSystem {
+    background-color: #f8f5f0;
+    color: #333;
+    height: 100vh;
+    overflow-y: auto;
+    display: none;
+}
+
+#adminSystem.dark-theme {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+/* ==================== 响应式调整 ==================== */
 @media (max-width: 1200px) {
     .charts-container {
         grid-template-columns: 1fr;
@@ -2279,6 +2393,15 @@ button.submit-btn:hover {
         margin-right: 0;
         margin-bottom: 15px;
     }
+
+    .role-selector {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .role-btn {
+        width: 100px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2324,131 +2447,5 @@ button.submit-btn:hover {
     .account-tab.active {
         border-left-color: #b8860b;
         border-bottom-color: #eee;
-    }
-
-    /* 额外的样式 - 补充原有样式可能缺失的部分 */
-
-    /* 通知详情容器 */
-    .notification-detail-container {
-        padding: 30px;
-        background-color: #fff;
-        border-radius: 8px;
-        margin-top: 20px;
-        display: none;
-    }
-
-    .notification-detail-container.active {
-        display: block;
-    }
-
-    /* 表格样式 */
-    table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-
-    table th,
-    table td {
-        border: 1px solid #e0d0b0;
-        padding: 10px;
-        text-align: left;
-    }
-
-    .student-body.dark-theme table th,
-    .student-body.dark-theme table td {
-        border-color: #555;
-    }
-
-    /* 编辑按钮 */
-    .edit-standard-btn {
-        background: #b8860b;
-        color: white;
-        border: none;
-        padding: 4px 12px;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
-    .edit-standard-btn:hover {
-        background: #a0522d;
-    }
-
-    /* 文件上传区域 */
-    .upload-area {
-        text-align: center;
-        padding: 40px 20px;
-        border: 2px dashed #d4a017;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .upload-area:hover {
-        border-color: #b8860b;
-        background-color: #f9f5f0;
-    }
-
-    /* 预览图片 */
-    .proof-preview {
-        max-width: 200px;
-        margin-top: 10px;
-        border: 1px solid #eee;
-        border-radius: 4px;
-        overflow: hidden;
-    }
-
-    .proof-preview img {
-        width: 100%;
-        height: auto;
-    }
-
-    /* 响应式调整 */
-    @media (max-width: 768px) {
-        .role-selector {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .role-btn {
-            width: 100px;
-        }
-    }
-
-    /* 通知详情容器样式 */
-    #notification-detail-container {
-        margin-top: 20px;
-    }
-
-    .notification-detail-container {
-        background-color: #fff;
-        border-radius: 8px;
-        padding: 25px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
-
-    .student-body.dark-theme .notification-detail-container {
-        background-color: #3a3a3a;
-    }
-
-    /* 确保详情容器不超出内容区域 */
-    .content-area {
-        position: relative;
-    }
-
-    /* 返回按钮样式 */
-    .back-btn {
-        background-color: #b8860b;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 6px;
-        cursor: pointer;
-        margin-top: 20px;
-        transition: all 0.3s ease;
-    }
-
-    .back-btn:hover {
-        background-color: #a0522d;
-        transform: translateY(-2px);
     }
 }
